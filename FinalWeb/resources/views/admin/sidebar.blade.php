@@ -50,7 +50,7 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Product </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('view_product')}}"> Add Product </a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> Show Product </a></li>
                 
               </ul>

@@ -32,4 +32,5 @@ Route::middleware([
  Route::get('/view_catagory',[AdminController::class,'view_catagory']);
  Route::POST('/add_catagory',[AdminController::class,'add_catagory']);
  Route::get('/delete_catagory/{id}',[AdminController::class,'delete_catagory']);
+ Route::get('/view_product',[AdminController::class,'view_product']);
 });
