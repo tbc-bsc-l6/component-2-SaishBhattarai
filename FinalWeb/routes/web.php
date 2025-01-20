@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +29,5 @@ Route::middleware([
     })->name('dashboard');
 
  Route::get('/redirect',[HomeController::class,'redirect']);
- 
+ Route::get('/view_catagory',[AdminController::class,'view_catagory']);
 });
