@@ -50,4 +50,9 @@ class AdminController extends Controller
         $product->delete();
         return redirect()->back();
     }
+    public function update_product($id){
+        $product=product::find($id);
+        $product->delete();
+        return view('admin.update_product');
+    }
 }
