@@ -11,7 +11,7 @@ class AdminController extends Controller
         return view('admin.catagory');
     }
     public function add_catagory(Request $request){
-        $data=new catgory;
+        $data=new catagory();
         $data->catagory_name=$request->catagory;
         $data->save();
         return redirect()->back()->with('message','Added Catagory');

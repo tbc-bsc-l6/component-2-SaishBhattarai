@@ -33,6 +33,11 @@
         .input_color{
             color: black;
         }
+        .center{
+            margin: auto;
+            width: 50%;
+            text-align: center;
+        }
     </style>
   </head>
   <body>
@@ -59,8 +64,11 @@
                     <input type="submit" class="btn btn-primay" name="submit" value="Add Catagory">
                 </form>
             </div>
-            <table>
-                
+            <table class="center">
+                <tr>
+                    <td>Catagory Name</td>
+                    <td>Action</td>
+                </tr>
             </table>
            </div>
         </div>
