@@ -42,4 +42,7 @@ class AdminController extends Controller
         $product->save();
         return redirect()->back();
     }
+    public function show_product(){
+        return view('admin.show_product');
+    }
 }
