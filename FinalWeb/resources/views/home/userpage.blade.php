@@ -20,13 +20,14 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
+      <!-- header section -->
+      @include('home.header')
+      <!-- header section -->
    </head>
    <body>
       <div class="hero_area">
 
-         <!-- header section -->
-          @include('home.header')
-         <!-- header section -->
+         
          <!-- slider section -->
          @include('home.slider')
         <!-- slider section -->
@@ -40,9 +41,7 @@
          <!-- product section -->
          @include('home.product') 
          <!-- product section -->
-         <!-- client section -->
-         @include('home.client')
-         <!-- client section -->
+         
          <!-- footer -->
          @include('home.footer')
          <!-- footer -->
