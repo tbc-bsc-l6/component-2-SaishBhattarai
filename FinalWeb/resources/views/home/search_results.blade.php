@@ -1,3 +1,5 @@
+<!-- resources/views/search_results.blade.php -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,7 +11,7 @@
         <ul class="list-group">
             @foreach($results as $product)
                 <li class="list-group-item">
-                    <h5><a href="{{ url('products/' . $product->id) }}">{{ $product->name }}</a></h5>
+                    <h5><a href="{{ url('products/' . $product->id) }}">{{ $product->title }}</a></h5>
                     <p>{{ $product->description }}</p>
                 </li>
             @endforeach

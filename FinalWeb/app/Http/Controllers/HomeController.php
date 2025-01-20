@@ -120,11 +120,11 @@ class HomeController extends Controller
         $query = $request->input('query');
 
         // Adjust the column names based on your database schema
-        $results = Product::where('product_name', 'LIKE', "%$query%") // Replace `name` with the correct column name
-                        ->orWhere('details', 'LIKE', "%$query%")    // Replace `description` with the correct column name
+        $results = Product::where('title', 'LIKE', "%$query%") // Replace `name` with the correct column name
+                        ->orWhere('desciption', 'LIKE', "%$query%")    // Replace `description` with the correct column name
                         ->get();
 
-        return view('search_results', compact('results', 'query'));
+        return view('home.search_results', compact('results', 'query'));
     }
 
 }
