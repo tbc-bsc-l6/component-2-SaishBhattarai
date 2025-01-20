@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('product_id')->nullable();
             $table->string('payment_status')->nullable();
             $table->string('delivery_status')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -37,6 +38,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropColumn('image');
+        });
     }
+
 };

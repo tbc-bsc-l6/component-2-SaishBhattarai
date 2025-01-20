@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Product;
@@ -73,8 +73,45 @@ class HomeController extends Controller
         $cart->delete();
         return redirect()->back();
     }
-    public function cash_order(){
+    public function cash_order()
+{
+    $user = Auth::user();
+    $userid = $user->id;
 
+    // Fetch user's cart data
+    $data = cart::where('user_id', '=', $userid)->get();
+
+    foreach ($data as $dataItem) {
+        // Create a new order instance
+        $order = new order();
+
+        // Assign data to the order object
+        $order->name = $dataItem->name;
+        $order->email = $dataItem->email;
+        $order->phone = $dataItem->phone;
+        $order->address = $dataItem->address ?? 'Address not provided'; // Handle null address
+        $order->user_id = $dataItem->user_id;
+        $order->product_title = $dataItem->product_title;
+        $order->price = $dataItem->price;
+        $order->quantity = $dataItem->quantity;
+        $order->image = $dataItem->image; // Ensure this column exists in the orders table
+        $order->product_id = $dataItem->product_id;
+        $order->payment_status = 'cash on delivery';
+        $order->delivery_status = 'processing';
+
+        // Save the order
+        $order->save();
+
+        // Remove the item from the cart
+        $cart = cart::find($dataItem->id);
+        if ($cart) {
+            $cart->delete();
+        }
     }
+
+    // Redirect back with success message
+    return redirect()->back()->with('success', 'Product ordered successfully!');
+    }
+
 }
 
