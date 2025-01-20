@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public function redirect(){
+        return view('home.userpage');
+
+    }
     public function index(){
         if(Auth::id()){
             $usertype=Auth()->user()->usertype;
