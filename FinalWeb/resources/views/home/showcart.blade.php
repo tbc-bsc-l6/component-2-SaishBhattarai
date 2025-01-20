@@ -70,7 +70,10 @@
          </div>
          <h1 class="total_deg">Total Price : {{$totalprice}}</h1>
          </div>
-         
+         <div>
+            <h1 style="font-size: 25px; padding-bottom: 15px;"> Proceed to Order</h1>
+            <a href="{{url('cash_order')}}"class="btn btn-danger">Cash On Delivery</a>
+         </div>
          <!-- footer -->
          @include('home.footer')
          <!-- footer -->

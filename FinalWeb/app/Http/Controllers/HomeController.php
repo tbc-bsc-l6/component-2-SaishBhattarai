@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -71,6 +72,9 @@ class HomeController extends Controller
         $cart=cart::find($id);
         $cart->delete();
         return redirect()->back();
+    }
+    public function cash_order(){
+
     }
 }
 
