@@ -19,13 +19,16 @@
                         <a class="nav-link" href="{{ url('show_cart') }}">Cart</a>
                     </li>
                     <!-- Search form -->
+                    
                     <li class="nav-item">
-                        <form class="form-inline">
+                        <form class="form-inline" action="{{ route('search') }}" method="GET">
+                            <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search">
                             <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </form>
                     </li>
+
                     <!-- Authentication links (login/register) -->
                     @if (Route::has('login'))
                         @auth

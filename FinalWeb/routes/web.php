@@ -43,4 +43,5 @@ Route::middleware([
  Route::get('/show_cart',[HomeController::class,'show_cart']);
  Route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
  Route::get('/cash_order',[HomeController::class,'cash_order']);
+ Route::get('/search', [HomeController::class, 'search'])->name('search');
 });

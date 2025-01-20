@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
+
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -112,6 +113,20 @@ class HomeController extends Controller
     // Redirect back with success message
     return redirect()->back()->with('success', 'Product ordered successfully!');
     }
+    
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        // Adjust the column names based on your database schema
+        $results = Product::where('product_name', 'LIKE', "%$query%") // Replace `name` with the correct column name
+                        ->orWhere('details', 'LIKE', "%$query%")    // Replace `description` with the correct column name
+                        ->get();
+
+        return view('search_results', compact('results', 'query'));
+    }
 
 }
+
 
