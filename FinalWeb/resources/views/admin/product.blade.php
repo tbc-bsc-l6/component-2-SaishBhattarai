@@ -63,7 +63,6 @@
                  <input type="file" name="image" require="">
                  </div>
                  <div>
-                
                  <input type="submit" value="Add Product" class="btn btn-primary">
                  </div>
                 </form>
