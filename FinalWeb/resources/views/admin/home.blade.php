@@ -11,10 +11,7 @@
       <!-- navbar -->
       @include('admin.navbar')
       <!-- navbar -->  
-      <!-- body -->
-      @include('admin.body')
-      <!-- body -->
-     </div>
+      
      <!-- script -->
      @include('admin.script')
      <!-- script -->

@@ -4,10 +4,7 @@
         <div class="flex "> <!-- Added 'items-center' to align vertically -->
             <div class="flex "> <!-- Added 'items-center' for vertical alignment -->
                 <!-- Navigation Links -->
-                >
-                    <x-nav-link >
-                        
-                    </x-nav-link>
+                    
                 </div>
             </div>
 
