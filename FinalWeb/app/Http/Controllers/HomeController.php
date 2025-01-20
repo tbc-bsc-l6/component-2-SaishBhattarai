@@ -31,33 +31,36 @@ class HomeController extends Controller
         return view('home.product_details',compact('product'));
     }
     public function add_cart(Request $request, $id)
-{
-    if (Auth::id()) {
-        $user = Auth::user();
-        $product = Product::find($id);
+    {
+        if (Auth::id()) {
+            $user = Auth::user();
+            $product = Product::find($id);
 
-        // Check if the address is missing and set a default value
-        $address = $user->address ?? 'Address not provided';
+            // Check if the address is missing and set a default value
+            $address = $user->address ?? 'Address not provided';
 
-        $cart = new Cart();
-        $cart->name = $user->name;
-        $cart->email = $user->email;
-        $cart->phone = $user->phone;
-        $cart->address = $address;  // Use the fallback value if address is null
-        $cart->user_id = $user->id;
-        $cart->product_title = $product->title;
-        $cart->price = $product->price * $request->quantity;
-        $cart->image = $product->image;
-        $cart->product_id = $product->id;
-        $cart->quantity = $request->quantity;
-        $cart->save();
+            $cart = new Cart();
+            $cart->name = $user->name;
+            $cart->email = $user->email;
+            $cart->phone = $user->phone;
+            $cart->address = $address;  // Use the fallback value if address is null
+            $cart->user_id = $user->id;
+            $cart->product_title = $product->title;
+            $cart->price = $product->price * $request->quantity;
+            $cart->image = $product->image;
+            $cart->product_id = $product->id;
+            $cart->quantity = $request->quantity;
+            $cart->save();
 
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
-    } else {
-        return redirect('login')->with('error', 'You need to log in to add products to the cart.');
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+        } else {
+            return redirect('login')->with('error', 'You need to log in to add products to the cart.');
+        }
     }
-}
-
-
+    public function show_cart(){
+        $id = Auth::user()->id;
+        $cart=cart::where('user_id','=',$id)->get();
+        return view('home.showcart',compact('cart'));
+    }
 }
 
