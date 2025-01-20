@@ -45,13 +45,23 @@
       <!-- navbar -->  
         <div class="main-panel">
            <div class="content-wrapper">
+            @if(session()->has('message'))
+            <div class="alert alert-sucess">
+                {{session()->get('message')}}
+
+            </div>
+            @endif
             <div class="div_center">   
                 <h2 class="h2_font">Add Catagory</h2>
-                <from>
-                    <input class="input_color" type="text" name="name" placeholder="Write catagory name">
+                <from action="{{url('/add_catagory')}}" method="POST">
+                    @csrf
+                    <input class="input_color" type="text" name="catagory" placeholder="Write catagory name">
                     <input type="submit" class="btn btn-primay" name="submit" value="Add Catagory">
                 </form>
             </div>
+            <table>
+                
+            </table>
            </div>
         </div>
      </div>
