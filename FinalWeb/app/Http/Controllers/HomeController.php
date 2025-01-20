@@ -94,7 +94,7 @@ class HomeController extends Controller
         $order->product_title = $dataItem->product_title;
         $order->price = $dataItem->price;
         $order->quantity = $dataItem->quantity;
-        $order->image = $dataItem->image; // Ensure this column exists in the orders table
+        // $order->image = $dataItem->image; 
         $order->product_id = $dataItem->product_id;
         $order->payment_status = 'cash on delivery';
         $order->delivery_status = 'processing';
