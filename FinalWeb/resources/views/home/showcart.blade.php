@@ -41,7 +41,10 @@
             font-size: 30px;
             padding: 50px;
             text-align: center;
-        }  
+        }
+        .text{
+            text-align: center;
+        } 
     </style>
    </head>
    <body>
@@ -77,8 +80,11 @@
          <h1 class="total_deg">Total Price : {{$totalprice}}</h1>
          </div>
          <div>
-            <h1 style="font-size: 25px; padding-bottom: 15px;"> Proceed to Order</h1>
-            <a href="{{url('cash_order')}}"class="btn btn-danger">Cash On Delivery</a>
+            <h1 style="font-size: 25px; padding-bottom: 15px; text-align:center;"> Proceed to Order</h1>
+            <div style="text-align: center; margin-top: 20px;">
+         <a href="{{url('cash_order')}}" class="btn btn-danger">Cash On Delivery</a>
+         </div>
+
          </div>
          
 
