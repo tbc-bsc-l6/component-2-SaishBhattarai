@@ -7,13 +7,13 @@
                </h2>
             </div>
             <div class="row">
-                @foreach ($product as $product)
+                @foreach ($product as $products)
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
                            <a href="" class="option1">
-                           Men's Shirt
+                           Add to Cart
                            </a>
                            <a href="" class="option2">
                            Buy Now
@@ -21,19 +21,22 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="product/{{$product->image}}" alt="">
+                        <img src="product/{{$products->image}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
-                           ${{$product->title}}
+                           {{$products->title}}
                         </h5>
                         <h6>
-                        {{$product->price}}
+                        ${{$products->price}}
                         </h6>
                      </div>
                   </div>
                </div>
-               @endforeach  
+               @endforeach 
+                 <span style="padding-top: 20px;">
+                     {!!$product->withQueryString()->links('pagination::bootstrap-5')!!} 
+                 </span>
          </div>
       </section>
       <!-- end product section -->
