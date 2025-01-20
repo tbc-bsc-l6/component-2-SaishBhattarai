@@ -3,13 +3,13 @@
          <div class="container">
             <div class="box">
                <div class="arrival_bg_box">
-                  <img src="images/arrival-bg.png" alt="">
+                  <img src="images/arrival.png" alt="">
                </div>
                <div class="row">
                   <div class="col-md-6 ml-auto">
                      <div class="heading_container remove_line_bt">
                         <h2>
-                           #NewArrivals
+                           #Sale 25% Off
                         </h2>
                      </div>
                      <p style="margin-top: 20px;margin-bottom: 30px;">
