@@ -4,9 +4,7 @@
             <div class="row">
                <div class="col-md-4">
                    <div class="full">
-                      <div class="logo_footer">
-                        <a href="#"><img width="210" src="images/logo.png" alt="#" /></a>
-                      </div>
+                      
                       <div class="information_f">
                         <p><strong>ADDRESS:</strong> Aashish Marg, Kathmandu, Nepal</p>
                         <p><strong>TELEPHONE:</strong> +977 987654321056</p>
@@ -50,7 +48,7 @@
                      <div class="widget_menu">
                         <h3>Newsletter</h3>
                         <div class="information_f">
-                          <p>Subscribe by our newsletter and get update protidin.</p>
+                          <p>Subscribe by our newsletter and get update.</p>
                         </div>
                         <div class="form_sub">
                            <form>
