@@ -13,11 +13,9 @@
                         </h2>
                      </div>
                      <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
+                     The ultimate football gear sale has arrived! Get ready to dominate the field with incredible savings on all the latest equipment. From high-performance cleats to durable jerseys and protective gear, now is the perfect time to shop and save.
                      </p>
-                     <a href="">
-                     Shop Now
-                     </a>
+                     
                   </div>
                </div>
             </div>

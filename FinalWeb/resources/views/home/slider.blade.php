@@ -18,12 +18,12 @@
                                     
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 We’re excited to announce that our latest collection of football gear is now available! Whether you're looking for the perfect pair of cleats, high-performance jerseys, protective equipment, or accessories, we’ve got everything you need to elevate your game. Our new arrivals feature the latest innovations in design and technology to ensure comfort, durability, and top performance on the field.
+
+                                 Don’t miss out – shop the latest styles and gear up with the best football equipment today!
                                  </p>
                                  <div class="btn-box">
-                                    <a href="" class="btn1">
-                                    Shop Now
-                                    </a>
+                                    
                                  </div>
                               </div>
                            </div>
