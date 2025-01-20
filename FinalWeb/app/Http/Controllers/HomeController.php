@@ -58,9 +58,19 @@ class HomeController extends Controller
         }
     }
     public function show_cart(){
-        $id = Auth::user()->id;
-        $cart=cart::where('user_id','=',$id)->get();
-        return view('home.showcart',compact('cart'));
+        if (Auth::id()) {
+            $id = Auth::user()->id;
+            $cart=cart::where('user_id','=',$id)->get();
+            return view('home.showcart',compact('cart'));
+        } 
+        else {
+            return redirect('login')->with('error', 'You need to log in to add products to the cart.');
+        }  
+    }
+    public function remove_cart($id){
+        $cart=cart::find($id);
+        $cart->delete();
+        return redirect()->back();
     }
 }
 

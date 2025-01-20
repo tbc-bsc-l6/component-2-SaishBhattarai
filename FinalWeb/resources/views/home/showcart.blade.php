@@ -37,7 +37,11 @@
             font-size: 30px;
             padding: 5px;
         }
-        
+        .total_deg{
+            font-size: 30px;
+            padding: 50px;
+            text-align: center;
+        }  
     </style>
    </head>
    <body>
@@ -50,16 +54,21 @@
                 <th class="th_deg">Image</th>
                 <th class="th_deg">Action</th>
                 </tr>
+                <?php $totalprice=0; ?>
                 @foreach($cart as $cart)
                 <tr>
-                <th>{{$cart->product_title}}</th>
-                <th>{{$cart->quantity}}</th>
-                <th>{{$cart->price}}</th>
-                <th><img src="/product/{{$cart->image}}"></th>
+                <td>{{$cart->product_title}}</td>
+                <td>{{$cart->quantity}}</td>
+                <td>{{$cart->price}}</td>
+                <td><img src="/product/{{$cart->image}}"></td>
+                <td><a class="btn btn-danger" href="{{ url('remove_cart/'.$cart->id) }}">Remove</a></td>
                 </tr>
+
+                <?php $totalprice=$totalprice + $cart->price ; ?>
                 @endforeach
              </table>
          </div>
+         <h1 class="total_deg">Total Price : {{$totalprice}}</h1>
          </div>
          
          <!-- footer -->
