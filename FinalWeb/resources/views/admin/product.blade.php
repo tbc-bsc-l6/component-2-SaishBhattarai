@@ -63,15 +63,11 @@
                  </div>
                  <div>
                  <label>Product Price</label>
-                 <input class="text_color" type="number" name="Price" placeholder="Write a Price" require="">
-                 </div>
-                 <div>
-                 <label>Discount Price</label>
-                 <input class="text_color" type="number" name="dis_price" placeholder="Write a Discount">
+                 <input class="text_color" type="number" name="price" placeholder="Write a Price" require="">
                  </div>
                  <div>
                  <label>Product Quantity</label>
-                 <input class="text_color" type="number" min="0" name="Quantity" placeholder="Write a Quantity" require="">
+                 <input class="text_color" type="number" min="0" name="quantity" placeholder="Write a Quantity" require="">
                  </div>
                  <div>
                  <label>Product Catagory</label>

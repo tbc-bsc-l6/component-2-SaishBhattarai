@@ -74,7 +74,6 @@
                 <td>{{$product->quantity}}</td>
                 <td>{{$product->catagory}}</td>
                 <td>{{$product->price}}</td>
-                <td>{{$product->discount}}</td>
                 <td><img class="img_size" src="/product/{{$product->image}}"></td>
             </tr>
             @endforeach
